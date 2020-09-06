@@ -1,4 +1,4 @@
-package com.hadihammurabi.belajar;
+package com.hadihammurabi.belajar.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.GetMapping;
