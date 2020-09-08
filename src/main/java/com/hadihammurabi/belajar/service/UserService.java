@@ -27,7 +27,7 @@ public class UserService {
   }
 
   public User getUser(UUID id) {
-    return this.userRepository.findById(id);
+    return this.userRepository.findById(id).get();
   }
 
   public User updateUser(UUID id, User newUser) {
