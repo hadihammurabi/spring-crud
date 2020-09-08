@@ -30,6 +30,17 @@ public class UserService {
     return this.userRepository.findById(id);
   }
 
+  public User updateUser(UUID id, User newUser) {
+    User user = this.getUser(id);
+    if (newUser.getUsername() != null) {
+      user.setUsername(newUser.getUsername());
+    }
+    if (newUser.getPassword() != null) {
+      user.setPassword(newUser.getPassword());
+    }
+    return this.userRepository.save(user);
+  }
+
   public void deleteUser(UUID id) {
     User user = this.getUser(id);
     this.userRepository.delete(user);
