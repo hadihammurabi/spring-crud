@@ -36,6 +36,11 @@ public class UserController {
     return this.userService.createUser(user);
   }
 
+  @GetMapping("/{id}")
+  public User show(@PathVariable("id") UUID id) {
+    return this.userService.getUser(id);
+  }
+
   @DeleteMapping("/{id}")
   public String delete(@PathVariable("id") UUID id) {
     this.userService.deleteUser(id);
