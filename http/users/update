@@ -1,0 +1,6 @@
+PUT http://localhost:8080/users/56d9b3e9-5ddb-404d-b2fc-154462eaff41
+Content-Type: application/json
+
+{
+  "username": "rooti"
+}
