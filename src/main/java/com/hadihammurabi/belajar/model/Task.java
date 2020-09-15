@@ -4,6 +4,8 @@ import java.util.UUID;
 
 import org.hibernate.annotations.GenericGenerator;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.persistence.Id;
@@ -25,6 +27,7 @@ public class Task {
   private String title;
   private String description;
 
+  @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"}) 
   @ManyToOne(fetch=FetchType.LAZY)
   @JoinColumn(name="owner_id")
   private User owner;

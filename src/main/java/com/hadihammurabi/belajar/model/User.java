@@ -3,6 +3,7 @@ package com.hadihammurabi.belajar.model;
 import java.util.UUID;
 
 import org.hibernate.annotations.GenericGenerator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
@@ -20,6 +21,8 @@ public class User {
   private UUID id;
 
   private String username;
+
+  @JsonIgnore
   private String password;
 
   public User() {}
