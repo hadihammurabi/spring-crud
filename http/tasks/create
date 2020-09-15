@@ -1,0 +1,8 @@
+POST http://localhost:8080/tasks
+Content-Type: application/json
+
+{
+  "title": "sarapan",
+  "description": "makan pagi pagi",
+  "owner_id": "56d9b3e9-5ddb-404d-b2fc-154462eaff41"
+}
